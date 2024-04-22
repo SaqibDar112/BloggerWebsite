@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project-SaqibDar</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+
+<body>
+    <section id="section1">
+        <div>
+            <h1>Blogger</h1>
+        </div>
+        <li class="signin"><span>
+                <a href="loginpage.html">Sign In</a>
+            </span>
+        </li>
+        <ul class="ul">
+            <li class="li"><a href="project.html">Home</a></li>
+            <li class="li"><a href="ProjectAboutUs.html">About Us</a></li>
+            <li class="li"><a href="N/A">Contact</a></li>
+        </ul>
+        <h2>Publish Your Passion In Your, Own Way</h2>
+        <p class="p1">Create Unique and Beautiful Blog easily.</p>
+
+        <button type="submit" class="btn">Create Blog</button>
+        <center>
+            <i class="i">Here are few Places to visit</i>
+
+            <div id="cards">
+                <img class="images" src="../INT219/Cooking.jpg" alt="Image" width="70%">
+                <img class="images" src="../INT219/k1.jpg" alt="Image" width="70%">
+                <img class="images" src="../INT219/k2.jpeg" alt="Image" width="70%">
+                <img class="images" src="../INT219/p1.jpeg" alt="Image" width="70%">
+                <img class="images" src="../INT219/p2.jpeg" alt="Image" width="70%">
+            </div>
+        </center>
+    </section>
+
+
+    <section id="section2">
+
+        <div class="quote">
+            <h1>Choose the Perfect desgin</h1><br>
+            <p>Create a beautiful blog that fits your style. Choose from a<br>
+                selection of easy-to-use templates - all with flexible<br>
+                layouts and hundreds of background images - or design<br>
+                something new.</p>
+        </div>
+    </section>
+
+    <section id="section3">
+
+        <div class="quote2">
+            <h1>Get a Domain</h1><br>
+            Give your blog the perfect home. Get a blogspot.com <br>
+            domain or buy a custom domain with just a few clicks.
+        </div>
+    </section>
+    <section id="section4">
+        <video autoplay loop muted class="video">
+            <source src="../INT219/istockphoto-1457172707-640_adpp_is.mp4" type="video/mp4">
+        </video>
+        <div class="quote3">
+            <h1>Earn Money</h1><br>
+            <p>Get paid for your hard work. Google AdSense can<br>
+                automatically display relevant targeted ads on your blog<br>
+                so that you can earn income by posting about your<br>
+                passion.</p>
+        </div>
+    </section>
+
+    <footer class="ft">
+        <section id="footer">
+            <ul>
+                <li class="listHead">
+                    <h3>Help</h3>
+                </li>
+                <li class="list"><a class="anch" href="/">Help center</a></li>
+                <li class="list"><a class="anch" href="/">Help Forum</a></li>
+                <li class="list"><a class="anch" href="/">Video Tutorials</a></li>
+            </ul>
+            <ul>
+                <li class="saqib">
+                    <h3>Community</h3>
+                </li>
+                <li class="com"><a class="anch1" target="_blank"
+                        href="https://www.linkedin.com/in/saqib-dar-36856020a/">Linkedin - @SaqibDar</a></li>
+            </ul>
+        </section>
+        <hr>
+        <section class="term">
+            <ul>
+                <li class="lft"><a class="lft"href="/">Terms and Service</a></li>
+                <li class="lft"><a class="lft"href="/">Privacy</a></li>
+                <li class="lft"><a class="lft"href="/">Content Policy</a></li>
+            </ul>
+        </section>
+    </footer>
+
+    <script>
+        let currentImageIndex = 0;
+        const img = document.querySelectorAll('.images');
+        function showImage(index) {
+            img.forEach(image => image.style.display = 'none');
+            img[index].style.display = 'block';
+        }
+        function changeSlide(n) {
+            currentImageIndex = (currentImageIndex + n + img.length) % img.length;
+            showImage(currentImageIndex);
+        }
+        showImage(currentImageIndex);
+        let slideshowInterval = setInterval(() => changeSlide(1), 1900);
+    </script>
+</body>
+
+</html>
